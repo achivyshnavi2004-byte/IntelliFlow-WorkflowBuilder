@@ -1,128 +1,70 @@
-Full-Stack Workflow Builder
-*Overview
-Full-Stack Workflow Builder is a No-Code/Low-Code platform to visually create intelligent AI workflows.
-Build, connect, and configure components to handle user queries, extract knowledge from documents, leverage AI, and deliver answers — all without writing a single line of code.
+# Getting Started with Create React App
 
-*Highlights
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-Visual Workflow Creation: Drag, drop, and connect components effortlessly.
-Dynamic User Queries: Real-time chat interface handles questions seamlessly.
-Smart Knowledge Base: Upload PDFs, Word, Excel, PPTX, TXT; extract text; generate embeddings; retrieve relevant context.
-Advanced AI Engine: Integrates OpenAI GPT & Gemini for accurate, context-aware responses.
-Integrated Web Search: Augment AI answers with SerpAPI or Brave search results.
-Flexible Execution: Execute workflows, validate connections, and handle follow-ups automatically.
+## Available Scripts
 
-* Components
-1️⃣ User Query – Entry point; collects user questions.
-2️⃣ Knowledge Base – Process documents, generate embeddings, store/retrieve context.
-3️⃣ LLM Engine – Receives query + context, calls LLMs (OpenAI GPT / Gemini), optionally enriches via web search.
-4️⃣ Output – Displays responses in chat interface; follow-ups reuse workflow logic.
+In the project directory, you can run:
 
-*Workflow Flow:
-User Query → Knowledge Base (optional) → LLM Engine → Output
+### `npm start`
 
-*Tech Stack
-Frontend: React.js, React Flow (drag-and-drop canvas)
-Backend: FastAPI (REST API)
-Database: PostgreSQL (metadata & workflow storage)
-Vector Store: ChromaDB (contextual search)
-Embeddings: OpenAI, Gemini
-LLM: OpenAI GPT, Gemini
-Text Extraction: PyMuPDF, python-docx, python-pptx, pandas
+Runs the app in the development mode.\
+Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-Getting Started-
-*Frontend:
-cd frontend
-npm install
-npm start
+The page will reload when you make changes.\
+You may also see any lint errors in the console.
 
-*Backend:
-cd backend
-pip install -r requirements.txt
-uvicorn main:app --reload
+### `npm test`
 
-*Database:
-Configure PostgreSQL and update environment variables in backend.
+Launches the test runner in the interactive watch mode.\
+See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-📁 Project Structure
-Full-Stack/
-│
-├─ frontend/
-│   ├─ src/
-│   │   ├─ App.js
-│   │   ├─ CustomNode.js
-│   │   ├─ FileUpload.js
-│   │   └─ index.html
-│   └─ package.json
-│
-├─ backend/
-│   ├─ app/
-│   ├─ models/
-│   ├─ services/
-│   ├─ routes/
-│   ├─ venv/
-│   ├─ main.py
-│   ├─ query.py
-│   └─ requirements.txt
-│
-└─ README.md
+### `npm run build`
 
-*Impact
-No-Code AI Workflows: Build sophisticated workflows visually.
-Intelligent Knowledge Handling: Multi-format document ingestion with contextual insights.
-Advanced AI Integration: Human-like, accurate responses with OpenAI GPT, Gemini, and embeddings.
-Real-Time Interactivity: Immediate answers via chat interface.
-Professional & Scalable: Modular architecture for deployment and future expansion.
+Builds the app for production to the `build` folder.\
+It correctly bundles React in production mode and optimizes the build for the best performance.
 
- *Future Enhancements
-Snap-to-grid and alignment tools for canvas precision.
-Real-time logs and progress indicators.
+The build is minified and the filenames include the hashes.\
+Your app is ready to be deployed!
 
-Demo Example
-1. Build a Workflow
-Open the React Flow canvas in the frontend.
-Drag the following components onto the workspace:
-User Query – collects the user’s question.
-Knowledge Base – optional; upload PDFs, Word, Excel, or PPTX files.
-LLM Engine – integrates OpenAI GPT or Gemini to process queries.
-Output – displays the AI response in a chat interface.
+See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-Connect the components in the order:
-User Query → Knowledge Base (optional) → LLM Engine → Output
+### `npm run eject`
 
-Configure each component:
-User Query: no special config needed.
-Knowledge Base: upload sample documents, choose embedding model.
-LLM Engine: provide API key, select model, optionally add a prompt.
-Output: default chat settings.
+**Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
-2. Execute the Workflow
-Click Build Stack to validate and prepare the workflow.
-Open the Chat Interface.
-Enter a question, e.g.,
-What are the key points from the uploaded document about AI trends in 2025?
+If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-The workflow executes:
-Retrieves relevant context from the Knowledge Base (if available).
-Sends the query and context to the LLM Engine.
-Optionally enriches the response with a web search.
-Displays the final response in the Output component.
+Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
-3. Example Output
-User Query:
-Explain the main trends in AI for 2025.
+You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
-AI Response (Output Component):
-Based on the uploaded documents and web sources, the main AI trends in 2025 include:
-1. Advanced natural language models powering real-time business analytics.
-2. Integration of AI in healthcare for diagnostics and personalized treatment.
-3. Increased use of AI in autonomous vehicles and smart mobility.
-4. Growth of multimodal AI combining text, image, and audio understanding.
-5. Ethical AI frameworks and explainable models gaining prominence.
+## Learn More
 
-4. Follow-Up Questions
-Type a new question in the chat interface.
-The workflow reuses the same logic and context to generate a response.
-Kubernetes deployment for enterprise-grade scalability.
+You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-Multi-user workflow management and sharing.
+To learn React, check out the [React documentation](https://reactjs.org/).
+
+### Code Splitting
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+
+### Analyzing the Bundle Size
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+
+### Making a Progressive Web App
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+
+### Advanced Configuration
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+
+### Deployment
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+
+### `npm run build` fails to minify
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
